@@ -19,9 +19,10 @@ function initializePage() {
 }
 
 function projectClick(e){
-	//prevent the page from reloading
+	// Cancel the default action, which prevents the page from reloading
 	e.preventDefault();
-	// In an event handler, $(this) refers to
-	// the object that triggered the event
-	$(this).css("background-color", "#7fff00");
+	// In an event listener, $(this) is the element that fired the event
+	var projectTitle = $(this).find("p").text();
+	var jumbotronHeader = $("#jumbotron h1");
+	jumbotronHeader.text(projectTitle);
 }
