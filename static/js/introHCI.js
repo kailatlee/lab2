@@ -22,6 +22,7 @@ function projectClick(e){
 	// Cancel the default action, which prevents the page from reloading
 	e.preventDefault();
 	// In an event listener, $(this) is the element that fired the event
+	$(this).css("background-color", "#7fff00");
 	var projectTitle = $(this).find("p").text();
 	var jumbotronHeader = $("#jumbotron h1");
 	jumbotronHeader.text(projectTitle);
